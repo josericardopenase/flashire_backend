@@ -1,0 +1,13 @@
+{
+  "editor.formatOnType": true,
+  "editor.defaultFormatter": "black",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "colorize.languages": ["typescript", "javascript", "css", "scss"],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+	
+  },
+
+}

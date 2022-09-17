@@ -1,0 +1,14 @@
+{
+  "name": "[name]",
+  "version": "1.0.0",
+  "description": "API documentation for [name] services",
+  "title": "[name] API",
+  "order": [
+    "General" 
+  ],
+  "template": {
+    "withCompare": false,
+    "withGenerator": false,
+    "forceLanguage": "en"
+  }
+}
