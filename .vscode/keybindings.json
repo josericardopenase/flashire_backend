@@ -22,6 +22,6 @@
   },
   {
     "key": "cmd+c",
-    "command": "workbench.action.closeAllEditors"
+    "command": "editor.action.clipboardCopyWithSyntaxHighlightingAction"
   }
 ]

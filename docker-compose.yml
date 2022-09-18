@@ -1,0 +1,52 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=pepe
+      - POSTGRES_DB=pepe
+      - POSTGRES_PASSWORD=pepe
+    volumes:
+      - pgdata:/var/lib/posgresql/data
+  api: &api
+    environment:
+      - DJANGO_ENV=LOCAL
+    build: .
+    ports:
+      - 8000:8000
+    command: python3 manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - db
+      - redis
+    links:
+      - db
+  celery_worker:
+    build: .
+    command: celery --app=config worker --loglevel=INFO
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - api
+      - redis
+      - db
+  celery_flower:
+    build: .
+    ports:
+      - "5566:5566"
+    command: celery --app=config flower --port=5566
+    depends_on:
+      - api
+      - redis
+      - db
+  celery_beat:
+    build: .
+    command: celery -A config beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    depends_on:
+      - api
+      - redis
+      - db
+  redis:
+    image: redis:alpine
+  
+volumes:
+  pgdata:

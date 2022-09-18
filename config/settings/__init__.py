@@ -1,10 +1,10 @@
 from decouple import config
 
-environment = config("DJANGO_ENV", "DEBUG")
+environment = config("DJANGO_ENV", "TEST")
 
-if environment == "DEBUG":
-    from .debug import *
-if environment == "DEV":
-    from .dev import *
-if environment == "PROD":
-    from .prod import *
+if environment == "LOCAL":
+    from .local import *
+if environment == "TEST":
+    from .test import *
+if environment == "PRODUCTION":
+    from .production import *

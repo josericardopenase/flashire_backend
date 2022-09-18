@@ -15,6 +15,17 @@ markdown = "*"
 django-filter = "*"
 python-decouple = "*"
 django-cors-headers = "*"
+django-crontab = "*"
+celery = "*"
+pylint-django = "*"
+pylint-celery = "*"
+django-environ = "*"
+pylint-common = "*"
+django-anymail = {extras = ["sendgrid", "sparkpost"], version = "*"}
+redis = "*"
+django-redis = "*"
+django-celery-beat = "*"
+flower = "*"
 
 [dev-packages]
 
