@@ -26,6 +26,7 @@ redis = "*"
 django-redis = "*"
 django-celery-beat = "*"
 flower = "*"
+pika = "*"
 
 [dev-packages]
 
