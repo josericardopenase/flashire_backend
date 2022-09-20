@@ -20,12 +20,6 @@ services:
       - redis
     links:
       - db
-  microservice1:
-    image: fastapi
-    links:
-      - api
-    ports:
-     - 80:80
   celery_worker:
     build: .
     command: celery --app=config worker --loglevel=INFO

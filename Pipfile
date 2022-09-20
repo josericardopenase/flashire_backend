@@ -27,6 +27,8 @@ django-redis = "*"
 django-celery-beat = "*"
 flower = "*"
 pika = "*"
+numpy = "*"
+pandas = "*"
 
 [dev-packages]
 
