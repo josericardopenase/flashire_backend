@@ -38,7 +38,7 @@ OWN_APPS = [
     "users",
     "webhooks",
     "api",
-    "api.v1",
+    "api.v1"
 ]
 
 CORS_ALLOWED_ORIGINS = [

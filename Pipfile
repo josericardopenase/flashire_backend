@@ -33,4 +33,4 @@ pandas = "*"
 [dev-packages]
 
 [requires]
-python_version = "3.8"
+\_version = "3.8"
